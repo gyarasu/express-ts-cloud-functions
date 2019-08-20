@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowJs": false,
     "module": "commonjs",
     "noImplicitReturns": true,
     "noUnusedLocals": true,
