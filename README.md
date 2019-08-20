@@ -25,7 +25,7 @@ $ firebase serve
 
 Then, you can access the functions via this URL.
 
-> http://localhost:5000/\<your firebase project id>/\<your firebase project region>/api/sample/userinfo
+> http://localhost:5000/your-firebase-project-id/your-firebase-project-region/api/sample/userinfo
 
 
 ## Build Setup
