@@ -1,4 +1,9 @@
 ## express-ts-cloud-functions
+This is a template for firebase cloud functions.
+
+### Reference
+- https://firebase.google.com/docs/functions/typescript
+- https://firebase.google.com/docs/hosting/functions
 
 ## About
 - Typescrpt
@@ -20,7 +25,7 @@ $ firebase serve
 
 Then, you can access the functions via this URL.
 
-> http://localhost:5000/\<your firebase project id\>/\<your project region\>/api/sample/userinfo
+> http://localhost:5000/\<your firebase project id>/\<your firebase project region>/api/sample/userinfo
 
 
 ## Build Setup
