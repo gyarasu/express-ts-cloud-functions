@@ -16,4 +16,4 @@ routeKeys.forEach((name) => {
   app.use(routes[name]);
 });
 
-exports.app = functions.https.onRequest(app);
+exports.api = functions.https.onRequest(app);
