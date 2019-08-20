@@ -1,8 +1,9 @@
+import * as Express from 'express';
 import { sample } from './sample';
 import { auth } from './auth';
 
 interface IRotues {
-  [key: string]: any; // TODO: avoid any
+  [key: string]: Express.Router;
 }
 
 export const routes: IRotues = {
