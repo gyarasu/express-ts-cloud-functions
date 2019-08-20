@@ -12,9 +12,8 @@ app.use(cors);
 
 // API routes
 const routeKeys:string[] = Object.keys(routes);
-
-for (let i:number = 0; i < routeKeys.length; i += 1) {
-  app.use(routes[routeKeys[i]]);
-}
+routeKeys.forEach((name) => {
+  app.use(routes[name]);
+});
 
 exports.app = functions.https.onRequest(app);
