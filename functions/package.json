@@ -7,7 +7,7 @@
     "start": "yarn shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "lint": "eslint --fix -c ./.eslintrc.js './**/*.{ts}'"
+    "lint": "eslint --fix -c ./.eslintrc.js './**/*.ts'"
   },
   "engines": {
     "node": "8"
