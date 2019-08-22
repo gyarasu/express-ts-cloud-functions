@@ -14,7 +14,7 @@ initFirebase();
 app.use(cors);
 
 // API routes
-const routeKeys:string[] = Object.keys(routes);
+const routeKeys: string[] = Object.keys(routes);
 routeKeys.forEach((name) => {
   app.use(routes[name]);
 });

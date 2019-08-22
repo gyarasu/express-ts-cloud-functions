@@ -3,8 +3,8 @@ import * as Express from 'express';
 const router = Express.Router();
 
 interface ILogin {
-  id: string,
-  password: string,
+  id: string;
+  password: string;
 };
 
 router.post('/auth/login', async (req: Express.Request, res: Express.Response) => {
