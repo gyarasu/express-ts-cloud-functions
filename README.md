@@ -20,7 +20,6 @@ To run on localhost, you have to setup your firebase project as below.
 ```bash
 $ firebase login
 $ firebase use "<your project id>"
-$ firebase serve
 ```
 
 Then, you can access the functions via this URL.
