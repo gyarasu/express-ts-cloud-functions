@@ -12,7 +12,7 @@ export const firebaseAuth = async (req: Express.Request, res: Express.Response, 
   const token: string = req.headers.authorization.split('Bearer ')[1];
 
   await admin.auth().verifyIdToken(token).catch((err) => {
-    console.error(err);
+    console.warn(err);
     return res.status(401).json({
       message: 'credential is not correct.',
     })
