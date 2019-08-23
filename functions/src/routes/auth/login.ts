@@ -1,4 +1,5 @@
 import * as Express from "express";
+import { genFunctionName } from '../../utils/functions';
 
 const router = Express.Router();
 
@@ -27,6 +28,6 @@ router.post("/", (req: Express.Request, res: Express.Response) => {
 });
 
 export const login: IRotues = {
-  name: 'authLogin',
+  name: genFunctionName(__dirname, __filename),
   router,
 };

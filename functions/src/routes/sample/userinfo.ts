@@ -1,5 +1,6 @@
 import * as Express from "express";
 import { firebaseAuth } from "../../middleware/firebaseAuth";
+import { genFunctionName } from '../../utils/functions';
 
 interface IRotues {
   name: string;
@@ -23,6 +24,6 @@ router.get(
 );
 
 export const userinfo: IRotues = {
-  name: 'sampleUserinfo',
+  name: genFunctionName(__dirname, __filename),
   router
 };
