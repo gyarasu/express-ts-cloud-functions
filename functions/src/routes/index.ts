@@ -1,6 +1,6 @@
-import * as Express from 'express';
-import { sample } from './sample';
-import { auth } from './auth';
+import * as Express from "express";
+import { sample } from "./sample";
+import { auth } from "./auth";
 
 interface IRotues {
   [key: string]: Express.Router;
@@ -8,5 +8,5 @@ interface IRotues {
 
 export const routes: IRotues = {
   sample,
-  auth,
+  auth
 };

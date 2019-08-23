@@ -1,9 +1,8 @@
-import * as Express from 'express';
-import { routes } from './routes';
-import { cors } from './middleware/cors';
+import * as Express from "express";
+import { routes } from "./routes";
+import { cors } from "./middleware/cors";
 import { initFirebase } from "./utils/firebase";
-import * as functions from 'firebase-functions';
-
+import * as functions from "firebase-functions";
 
 const app = Express();
 
@@ -15,7 +14,7 @@ app.use(cors);
 
 // API routes
 const routeKeys: string[] = Object.keys(routes);
-routeKeys.forEach((name) => {
+routeKeys.forEach(name => {
   app.use(routes[name]);
 });
 
