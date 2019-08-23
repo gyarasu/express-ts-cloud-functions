@@ -1,11 +1,4 @@
-import * as Express from "express";
-import { userinfo } from './userinfo';
+import { userinfo } from "./userinfo";
+import { IRoutes } from "../../interfaces";
 
-interface IRotues {
-  name: string;
-  router: Express.Router;
-}
-
-export const sample: IRotues[] = [
-  userinfo,
-];
+export const sample: IRoutes[] = [userinfo];

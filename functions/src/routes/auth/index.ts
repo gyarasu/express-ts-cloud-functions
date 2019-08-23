@@ -1,12 +1,4 @@
-import { login } from './login';
-import * as Express from "express";
+import { login } from "./login";
+import { IRoutes } from "../../interfaces";
 
-interface IRotues {
-  name: string;
-  router: Express.Router;
-}
-
-
-export const auth: IRotues[] = [
-  login,
-];
+export const auth: IRoutes[] = [login];

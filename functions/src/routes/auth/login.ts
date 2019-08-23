@@ -1,20 +1,15 @@
-import * as Express from "express";
-import { genFunctionName } from '../../utils/functions';
+import { Router, Request, Response } from "express";
+import { genFunctionName } from "../../utils/functions";
+import { IRoutes } from "../../interfaces";
 
-const router = Express.Router();
+const router = Router();
 
 interface ILogin {
   id: string;
   password: string;
 }
 
-interface IRotues {
-  name: string;
-  router: Express.Router;
-}
-
-
-router.post("/", (req: Express.Request, res: Express.Response) => {
+router.post("/", (req: Request, res: Response) => {
   const credential: ILogin = req.body;
   if (credential.id === "sampleuser" && credential.password === "passw0rd") {
     res.status(200).json({
@@ -27,7 +22,7 @@ router.post("/", (req: Express.Request, res: Express.Response) => {
   }
 });
 
-export const login: IRotues = {
+export const login: IRoutes = {
   name: genFunctionName(__dirname, __filename),
-  router,
+  router
 };
