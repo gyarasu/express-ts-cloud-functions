@@ -1,7 +1,7 @@
 {
   "name": "functions",
   "scripts": {
-    "build": "rm -rf ./lib && tsc",
+    "build": "yarn lint && rm -rf ./lib && tsc",
     "serve": "yarn build && firebase serve --only functions",
     "shell": "yarn build && firebase functions:shell",
     "start": "yarn shell",

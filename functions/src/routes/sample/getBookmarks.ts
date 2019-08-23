@@ -12,11 +12,11 @@ router.get("/", (req: Request, res: Response) => {
   res.status(200).json([
     {
       id: 123,
-      name: 'My favorite things',
+      name: "My favorite things"
     },
     {
       id: 345,
-      name: 'Someday My Prince Will Come',
+      name: "Someday My Prince Will Come"
     }
   ]);
 });
