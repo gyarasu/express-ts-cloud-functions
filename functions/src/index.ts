@@ -9,13 +9,12 @@ const app = Express();
 // firebase initialize
 initFirebase();
 
-// add middleware
+// add cors middleware
 app.use(cors);
 
-// API routes
-const routeKeys: string[] = Object.keys(routes);
-routeKeys.forEach(name => {
-  app.use(routes[name]);
+// REST API routes
+routes.forEach(routerObj => {
+  let singleFunction = app;
+  singleFunction.use(routerObj.router);
+  exports[routerObj.key] = functions.https.onRequest(singleFunction);
 });
-
-exports.api = functions.https.onRequest(app);

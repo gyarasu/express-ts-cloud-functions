@@ -1,12 +1,15 @@
-import * as Express from "express";
 import { sample } from "./sample";
 import { auth } from "./auth";
+import * as Express from "express";
 
 interface IRotues {
-  [key: string]: Express.Router;
+  key: string;
+  router: Express.Router;
 }
 
-export const routes: IRotues = {
+const baseArray: IRotues[] = [];
+
+export const routes = baseArray.concat(
   sample,
-  auth
-};
+  auth,
+);
