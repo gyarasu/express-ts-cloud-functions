@@ -7,7 +7,13 @@ interface ILogin {
   password: string;
 }
 
-router.post("/auth/login", (req: Express.Request, res: Express.Response) => {
+interface IRotues {
+  name: string;
+  router: Express.Router;
+}
+
+
+router.post("/", (req: Express.Request, res: Express.Response) => {
   const credential: ILogin = req.body;
   if (credential.id === "sampleuser" && credential.password === "passw0rd") {
     res.status(200).json({
@@ -20,4 +26,7 @@ router.post("/auth/login", (req: Express.Request, res: Express.Response) => {
   }
 });
 
-export const login = router;
+export const login: IRotues = {
+  name: 'authLogin',
+  router,
+};

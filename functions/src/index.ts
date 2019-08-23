@@ -4,6 +4,11 @@ import { cors } from "./middleware/cors";
 import { initFirebase } from "./utils/firebase";
 import * as functions from "firebase-functions";
 
+interface IRotues {
+  name: string;
+  router: Express.Router;
+}
+
 const app = Express();
 
 // firebase initialize
@@ -13,8 +18,8 @@ initFirebase();
 app.use(cors);
 
 // REST API routes
-routes.forEach(routerObj => {
+routes.forEach((routerObj: IRotues) => {
   let singleFunction = app;
   singleFunction.use(routerObj.router);
-  exports[routerObj.key] = functions.https.onRequest(singleFunction);
+  exports[routerObj.name] = functions.https.onRequest(singleFunction);
 });

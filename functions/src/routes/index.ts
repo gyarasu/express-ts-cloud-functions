@@ -3,7 +3,7 @@ import { auth } from "./auth";
 import * as Express from "express";
 
 interface IRotues {
-  key: string;
+  name: string;
   router: Express.Router;
 }
 

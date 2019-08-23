@@ -1,9 +1,15 @@
 import * as Express from "express";
 import { firebaseAuth } from "../../middleware/firebaseAuth";
 
+interface IRotues {
+  name: string;
+  router: Express.Router;
+}
+
+
 const router = Express.Router();
 
-// The path `/smaple/*` requires firebase authentication
+// If this endpoint requires firebase authentication, add firebase middleware
 router.use("/", firebaseAuth);
 
 router.get(
@@ -16,4 +22,7 @@ router.get(
   }
 );
 
-export const userinfo = router;
+export const userinfo: IRotues = {
+  name: 'sampleUserinfo',
+  router
+};
