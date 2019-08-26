@@ -9,6 +9,14 @@
     "logs": "firebase functions:log",
     "lint": "eslint --fix -c ./.eslintrc.json './**/*.ts'"
   },
+  "lint-staged": {
+    "*.ts": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "engines": {
     "node": "8"
   },
@@ -28,6 +36,8 @@
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.4",
     "prettier": "^1.18.2",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
