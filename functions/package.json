@@ -10,7 +10,7 @@
     "lint": "eslint --fix -c ./.eslintrc.json './**/*.ts'"
   },
   "lint-staged": {
-    "*.ts": "eslint"
+    "*.ts": "eslint -c ./.eslintrc.json './**/*.ts'"
   },
   "husky": {
     "hooks": {
