@@ -11,7 +11,7 @@ This is a template for firebase cloud functions.
 
 ## Requirements
 - Firebase CLI
-- Node 8.11.x
+- Node 8.13.0
 - tsc
 
 ## Firebase Project Setting
@@ -53,6 +53,16 @@ export const login: IRoutes = {
 
 You have to export router object with name property.
 Function name is formed by combination of directory name and file name.
+
+*About routing path*
+```typescript
+router.post('/', (req: Request, res: Response) => {
+  // Do Something
+});
+```
+
+It is recommended to define path as '/'.  
+Because all endpoints will be exported to Firebase Cloud Functions indevidually with defferent names.
 
 ### services
 Business Logic
