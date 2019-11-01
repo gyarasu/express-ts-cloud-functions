@@ -14,15 +14,13 @@ export const firebaseAuth = async (
 
   const token: string = req.headers.authorization.split('Bearer ')[1];
 
-  await admin
-    .auth()
-    .verifyIdToken(token)
-    .catch(err => {
-      console.warn(err);
-      return res.status(401).json({
-        message: 'credential is not correct.'
-      });
+  try {
+    await admin.auth().verifyIdToken(token);
+    return next();
+  } catch (err) {
+    console.warn(err);
+    return res.status(401).json({
+      message: 'credential is not correct.'
     });
-
-  return next();
+  }
 };
