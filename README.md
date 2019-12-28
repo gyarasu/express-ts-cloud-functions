@@ -11,7 +11,7 @@ This is a template for firebase cloud functions.
 
 ## Requirements
 - Firebase CLI
-- Node 8.13.0
+- Node 10.17.0
 - tsc
 
 ## Firebase Project Setting
