@@ -1,5 +1,31 @@
 {
   "extends": [
     "config:base"
+  ],
+  "timezone": "Asia/Tokyo",
+  "labels": ["renovate"],
+  "vulnerabilityAlerts": {
+    "labels": ["security"]
+  },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["after 10am and before 11am on tuesday"]
+  },
+  "packageRules": [
+    {
+      "updateTypes": ["major"],
+      "labels": ["renovate", "update-major"]
+    },
+    {
+      "updateTypes": ["minor", "patch"],
+      "excludePackageNames": ["node"],
+      "labels": ["renovate", "update-minor"],
+      "groupName": "non-major-updates",
+      "schedule": ["after 10am and before 11am on monday"]
+    },
+    {
+      "packageNames": ["node"],
+      "labels": ["renovate", "node-version"]
+    }
   ]
 }
