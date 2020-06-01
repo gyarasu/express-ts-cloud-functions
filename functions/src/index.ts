@@ -17,5 +17,7 @@ routes.forEach((routerObj: IRoutes) => {
 
   // export routes individually for cloud functions
   app.use(routerObj.router);
+
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   exports[routerObj.name] = functions.https.onRequest(app);
 });

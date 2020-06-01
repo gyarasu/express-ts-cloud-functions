@@ -10,6 +10,8 @@ interface ILogin {
 }
 
 router.post('/', (req: Request, res: Response) => {
+  // TODO: clean architectureに直す際にdisableしている部分を消す
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const credential: ILogin = req.body;
   if (credential.id === 'sampleuser' && credential.password === 'passw0rd') {
     res.status(200).json({
