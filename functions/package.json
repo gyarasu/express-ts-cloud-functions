@@ -36,7 +36,7 @@
     "eslint-config-prettier": "6.1.0",
     "eslint-plugin-node": "9.1.0",
     "eslint-plugin-prettier": "3.1.0",
-    "husky": "3.0.4",
+    "husky": "9.0.11",
     "lint-staged": "9.2.4",
     "prettier": "1.18.2",
     "ts-node": "8.3.0",
